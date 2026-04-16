@@ -4,6 +4,8 @@ An open-source, fully 3D-printed quadruped robot with a live camera feed, object
 
 Built around an ESP32-CAM as the main controller and an optional Raspberry Pi as an AI co-processor.
 
+> **Current state:** Architecture, BOM, and firmware scaffold are done. CAD design and full firmware implementation are the next big milestones — see [Project status](#project-status). The design is validated against real community builds (SpotMicro, OpenQuadruped) — it can absolutely be built, but there is real work ahead.
+
 ---
 
 ## Features
@@ -36,7 +38,7 @@ Built around an ESP32-CAM as the main controller and an optional Raspberry Pi as
 | INMP441 I2S microphone *(voice, optional)* | 1 | €4 |
 | 7.4V 2S LiPo battery 2200mAh | 1 | €14 |
 | 2S LiPo BMS / protection board | 1 | €4 |
-| Mini DC-DC buck converter (7.4V → 5V 3A) | 1 | €3 |
+| Mini DC-DC buck converter (7.4V → 5V **5A**) | 1 | €5 |
 | PLA filament for 3D printed parts | ~200g | €5 |
 | M2 / M3 screws and heat-set inserts | assorted | €4 |
 | Dupont wires, JST connectors | assorted | €3 |
@@ -62,11 +64,32 @@ Pi Zero 2W
   └─ USB ─► (power only from buck converter)
 ```
 
-Full KiCad schematic: [`hardware/schematic.kicad_sch`](hardware/)
+### ⚠️ ESP32-CAM GPIO constraints
+
+The AI Thinker ESP32-CAM has very few free GPIO pins when the camera is active. The SD card interface shares GPIO pins — if you use an SD card, I2C must move.
+
+| Pin | Default use | TORDEN-BOT use | Conflict? |
+|-----|------------|----------------|-----------|
+| GPIO0 | Boot / flash | TEACH button | Use briefly; hold LOW only to flash |
+| GPIO4 | Flash LED | Camera D0 | Camera takes priority; LED disabled |
+| GPIO12 | SD DAT2 | HC-SR04 ECHO | Safe if **no SD card** fitted |
+| GPIO13 | SD DAT3 | HC-SR04 TRIG | Safe if **no SD card** fitted |
+| GPIO14 | SD CLK | I2C SDA | Safe if **no SD card** fitted |
+| GPIO15 | SD CMD | I2C SCL | Safe if **no SD card** fitted |
+
+**Recommendation:** Leave the SD card slot empty. Use NVS flash for teaching mode storage (already planned).
+
+### ⚠️ Power budget
+
+8× MG996R servos can draw up to 500mA stall each → worst case ~4A. Use a **5A** buck converter, not 3A. The LiPo should be ≥2200mAh 30C rated.
+
+
 
 ---
 
 ## 3D Printed Parts
+
+> **Status:** Part names and print settings are designed; STL files are not created yet. CAD work in Fusion 360 is the first real build milestone.
 
 All parts designed to print without supports on a standard FDM printer.
 Print in **PLA** or **PETG** (PETG recommended for leg joints).
@@ -88,6 +111,8 @@ Layer height: 0.2mm · Nozzle: 0.4mm
 ---
 
 ## Firmware
+
+> **Status:** `main.cpp` scaffold exists (WiFi, MJPEG stream, WebSocket server, servo stub). The modules below are planned — structure is defined, code is not written yet.
 
 Built with **PlatformIO** (Arduino framework).
 
