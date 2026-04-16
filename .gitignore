@@ -1,0 +1,26 @@
+# *.env files — never commit these
+.env
+*.env.local
+
+# Build output
+.pio/
+.pioenvs/
+__pycache__/
+*.pyc
+*.pyo
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Large binary assets — store in Releases or link externally
+*.zip
+*.tar.gz
+*.bin
+*.elf
+
+# But DO track STL/STEP/GCODE in the repo
+!*.stl
+!*.step
+!*.gcode
