@@ -23,3 +23,4 @@ NN-your-project-name/
 - [ ] List your parts in hardware/BOM.md
 - [ ] Add CAD files or a link to where they live
 - [ ] Document how to build and flash it
+- [ ] Use `docs/ai-inputs.md` for the first Claude/Codex planning pass
