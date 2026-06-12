@@ -6,6 +6,8 @@ Built around an ESP32-CAM as the main controller and an optional Raspberry Pi as
 
 > **Current state:** Architecture, BOM, and firmware scaffold are done. CAD design and full firmware implementation are the next big milestones — see [Project status](#project-status). The design is validated against real community builds (SpotMicro, OpenQuadruped) — it can absolutely be built, but there is real work ahead.
 
+![TORDEN-BOT inspiration board — family maker bench with small robot parts](../../docs/inspiration-board.png)
+
 ---
 
 ## Features
@@ -142,6 +144,15 @@ cd projects/01-torden-bot/firmware
 pio run --target upload --upload-port /dev/ttyUSB0
 ```
 
+### First bring-up sequence
+
+1. Flash the scaffold and confirm serial output.
+2. Confirm WiFi connection or setup AP mode before wiring servos.
+3. Test the PCA9685 with one servo on bench power.
+4. Add one leg and tune neutral positions.
+5. Add all legs only after the single-leg test is repeatable.
+6. Keep the robot lifted on a stand for gait testing until current draw and foot travel are known.
+
 ### Configure WiFi
 
 Edit `firmware/src/main.cpp`:
@@ -253,6 +264,20 @@ Once connected to WiFi, open `http://torden.local` (or the IP shown on serial).
 - [Vosk offline speech recognition](https://alphacephei.com/vosk/)
 - [Spot Micro (inspiration)](https://github.com/mike4192/spotMicro)
 - [OpenQuadruped (inspiration)](https://github.com/adham-elarabawy/open-quadruped)
+- [StackChan CoreS3 companion robot](https://github.com/m5stack/StackChan)
+- [Stack-chan classic firmware/case/schematics](https://github.com/stack-chan/stack-chan)
+- [Clawdmeter ESP32-S3 Claude Code dashboard](https://github.com/HermannBjorgvin/Clawdmeter)
+- [Home Assistant Voice PE](https://github.com/esphome/home-assistant-voice-pe)
+- [ESP Web Tools browser flashing](https://esphome.github.io/esp-web-tools/)
+
+### What to borrow from reference projects
+
+| Reference | Borrow |
+|---|---|
+| Spot Micro / OpenQuadruped | Leg geometry, gait language, servo calibration docs |
+| StackChan | Expressive head/face behavior, compact case thinking, CoreS3-friendly interaction patterns |
+| Clawdmeter | Board abstraction, BLE daemon pattern, physical buttons as workflow shortcuts |
+| ESP Web Tools | Future browser flashing page so kids can install firmware without PlatformIO |
 
 ---
 
