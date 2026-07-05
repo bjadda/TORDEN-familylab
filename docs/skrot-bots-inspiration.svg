@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" font-family="Segoe UI, sans-serif">
+  <!-- SKROT-BOTS — original illustration in the scrap-robot style: wood blocks, screws, washers, springs -->
+  <rect width="900" height="320" fill="#F4EDE3"/>
+  <!-- workbench -->
+  <rect x="0" y="250" width="900" height="70" fill="#C9B393"/>
+  <rect x="0" y="250" width="900" height="8" fill="#B39D7D"/>
+  <line x1="60" y1="285" x2="260" y2="285" stroke="#B39D7D" stroke-width="2"/>
+  <line x1="600" y1="295" x2="840" y2="295" stroke="#B39D7D" stroke-width="2"/>
+
+  <!-- ══ BOT 1: classic wood-block bot, washer eyes, spring legs ══ -->
+  <g transform="translate(120,60)">
+    <!-- spring legs -->
+    <g stroke="#9AA3AB" stroke-width="4" fill="none" stroke-linecap="round">
+      <path d="M35 150 q-12 6 0 12 q12 6 0 12 q-12 6 0 12"/>
+      <path d="M85 150 q-12 6 0 12 q12 6 0 12 q-12 6 0 12"/>
+    </g>
+    <!-- nut feet -->
+    <rect x="18" y="184" width="34" height="12" rx="3" fill="#7E8790"/>
+    <rect x="68" y="184" width="34" height="12" rx="3" fill="#7E8790"/>
+    <!-- body -->
+    <rect x="15" y="92" width="90" height="62" rx="6" fill="#8B5E3C"/>
+    <rect x="15" y="92" width="90" height="62" rx="6" fill="none" stroke="#6E4629" stroke-width="2"/>
+    <line x1="24" y1="104" x2="96" y2="104" stroke="#6E4629" stroke-width="1" opacity=".5"/>
+    <line x1="24" y1="140" x2="96" y2="140" stroke="#6E4629" stroke-width="1" opacity=".5"/>
+    <!-- key held on body -->
+    <circle cx="60" cy="122" r="13" fill="none" stroke="#C9A227" stroke-width="5"/>
+    <rect x="60" y="118" width="26" height="7" rx="2" fill="#C9A227"/>
+    <rect x="78" y="124" width="5" height="6" fill="#C9A227"/>
+    <!-- neck bolt -->
+    <rect x="54" y="80" width="12" height="14" fill="#9AA3AB"/>
+    <!-- head -->
+    <rect x="8" y="18" width="104" height="64" rx="8" fill="#B08968"/>
+    <rect x="8" y="18" width="104" height="64" rx="8" fill="none" stroke="#8B6547" stroke-width="2"/>
+    <!-- washer + screw eyes -->
+    <circle cx="40" cy="48" r="19" fill="#D7DBDE" stroke="#8F979E" stroke-width="3"/>
+    <circle cx="40" cy="48" r="8" fill="#6E767E"/>
+    <path d="M34 48 h12 M40 42 v12" stroke="#3F464D" stroke-width="2.4"/>
+    <circle cx="82" cy="48" r="15" fill="#D7DBDE" stroke="#8F979E" stroke-width="3"/>
+    <circle cx="82" cy="48" r="6.5" fill="#6E767E"/>
+    <path d="M77 48 h10 M82 43 v10" stroke="#3F464D" stroke-width="2.2"/>
+    <!-- antenna screws -->
+    <rect x="26" y="4" width="5" height="16" fill="#9AA3AB"/>
+    <circle cx="28.5" cy="4" r="4.5" fill="#7E8790"/>
+    <rect x="90" y="8" width="5" height="12" fill="#9AA3AB"/>
+    <circle cx="92.5" cy="8" r="4.5" fill="#7E8790"/>
+  </g>
+
+  <!-- ══ BOT 2: plank bird with button eye and wedge beak ══ -->
+  <g transform="translate(400,80)">
+    <!-- nail legs -->
+    <line x1="42" y1="150" x2="36" y2="185" stroke="#7E8790" stroke-width="4" stroke-linecap="round"/>
+    <line x1="72" y1="150" x2="80" y2="185" stroke="#7E8790" stroke-width="4" stroke-linecap="round"/>
+    <!-- plank body, slightly tilted -->
+    <g transform="rotate(-6 60 90)">
+      <rect x="24" y="14" width="76" height="140" rx="6" fill="#2E4A6B"/>
+      <rect x="24" y="14" width="76" height="140" rx="6" fill="none" stroke="#22374F" stroke-width="2"/>
+      <line x1="34" y1="30" x2="34" y2="140" stroke="#22374F" stroke-width="1.5" opacity=".55"/>
+      <line x1="88" y1="26" x2="88" y2="136" stroke="#22374F" stroke-width="1.5" opacity=".55"/>
+      <!-- nail crest -->
+      <line x1="48" y1="14" x2="42" y2="-12" stroke="#7E8790" stroke-width="3.5" stroke-linecap="round"/>
+      <line x1="62" y1="14" x2="62" y2="-16" stroke="#7E8790" stroke-width="3.5" stroke-linecap="round"/>
+      <line x1="76" y1="14" x2="82" y2="-10" stroke="#7E8790" stroke-width="3.5" stroke-linecap="round"/>
+      <!-- button eye -->
+      <circle cx="62" cy="52" r="24" fill="#E2B93B" stroke="#B99022" stroke-width="3"/>
+      <circle cx="62" cy="52" r="12" fill="#1B222B"/>
+      <circle cx="58" cy="48" r="3.5" fill="#F4EDE3"/>
+      <!-- wedge beak -->
+      <path d="M96 44 L146 58 L96 72 Z" fill="#D98E2B" stroke="#B0701C" stroke-width="2"/>
+    </g>
+  </g>
+
+  <!-- ══ BOT 3: small keychain bot with mismatched screw eyes + frown slot ══ -->
+  <g transform="translate(640,116)">
+    <!-- keyring -->
+    <circle cx="52" cy="6" r="12" fill="none" stroke="#8F979E" stroke-width="4"/>
+    <!-- head/body block -->
+    <rect x="8" y="16" width="88" height="86" rx="10" fill="#6E4B33"/>
+    <rect x="8" y="16" width="88" height="86" rx="10" fill="none" stroke="#54371F" stroke-width="2"/>
+    <line x1="18" y1="34" x2="86" y2="30" stroke="#54371F" stroke-width="1.2" opacity=".5"/>
+    <line x1="18" y1="90" x2="86" y2="92" stroke="#54371F" stroke-width="1.2" opacity=".5"/>
+    <!-- mismatched screw eyes -->
+    <circle cx="36" cy="52" r="14" fill="#D7DBDE" stroke="#8F979E" stroke-width="3"/>
+    <path d="M28 52 h16 M36 44 v16" stroke="#5A626A" stroke-width="2.6"/>
+    <circle cx="70" cy="52" r="10" fill="#D7DBDE" stroke="#8F979E" stroke-width="3"/>
+    <path d="M64 52 h12" stroke="#5A626A" stroke-width="2.6"/>
+    <!-- frown slot -->
+    <path d="M32 84 q20 -10 42 -2" stroke="#2B1B10" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <!-- side bolts -->
+    <rect x="-2" y="50" width="10" height="8" rx="2" fill="#9AA3AB"/>
+    <rect x="96" y="50" width="10" height="8" rx="2" fill="#9AA3AB"/>
+    <!-- spring feet -->
+    <g stroke="#9AA3AB" stroke-width="3.5" fill="none" stroke-linecap="round">
+      <path d="M32 102 q-10 5 0 10 q10 5 0 10"/>
+      <path d="M72 102 q-10 5 0 10 q10 5 0 10"/>
+    </g>
+  </g>
+
+  <text x="450" y="308" text-anchor="middle" font-size="13" fill="#8A7A63" letter-spacing="2">SKROT-BOTS · wood + screws + springs + one small organ transplant</text>
+</svg>

@@ -120,7 +120,7 @@ flowchart LR
 
 The kids build robots from scrap — wood blocks, screws, springs, bottle caps, old keys. We give each one **an "organ transplant"**: small, reusable electronics modules that snap in and give the robot a personality. Same organs every time, so building the tenth bot is as easy as the first.
 
-<img src="docs/skrot-bots-inspiration.jpg" alt="Scrap robots built from wood blocks, screws, springs and buttons" width="420">
+<img src="docs/skrot-bots-inspiration.svg" alt="Scrap robots built from wood blocks, screws, springs and buttons" width="560">
 
 ```mermaid
 flowchart TB
@@ -155,6 +155,27 @@ Small SKROT-BOT-first projects that plug into the map above:
 | **STEMMEBOT** (voice bot) | Press its belly button → plays a random recorded family clip from a tin-can body | BRAIN + HEART + DFPlayer + speaker |
 
 Each is a one-weekend build, and the chore-o-meter closes the loop: **scrap robot → MQTT → wall dashboard.**
+
+### 🧠 AI & learning builds
+
+Two bots that use the same AI loop: the bot senses, a small companion daemon talks to Claude, and the bot answers back in kid language. Guardrails live in the daemon — kid-safe system prompt, no account data on-device, and an offline fallback so the bot still works when the internet doesn't.
+
+| Idea | What it does | Learning angle |
+|------|--------------|----------------|
+| **HVA-ER-DET?** (what-is-it? camera bot) | Scrap-bot with a camera eye. Point it at *anything* — a beetle, a circuit board, grandma's eggbeater — press its nose, and it **speaks a kid-level explanation** of what it sees and how it works | Instant curiosity machine; follow-up button asks "why?" up to three levels deep |
+| **LÆREBOT** (flash-card buddy) | Desk scrap-bot that runs 5-minute practice rounds: times tables, spelling, Norwegian↔English. Answer with buttons or voice; eyes light up green streaks, tail wags at milestones | Spaced repetition tuned by the AI to each kid; weekly progress lands on the e-paper dashboard, and the deck falls back to stored cards offline |
+
+```mermaid
+flowchart LR
+    KID["🧒 Kid"] -- "point / press / answer" --> BOT["🤖 Scrap-bot<br/>camera · mic · buttons · eyes"]
+    BOT -- "photo / answer" --> DAEMON["Companion daemon<br/>(Pi Zero 2W or PC)<br/>kid-safe prompt + guardrails"]
+    DAEMON -- "vision + chat" --> CLAUDE["Claude API"]
+    CLAUDE --> DAEMON
+    DAEMON -- "speech + eye cues" --> BOT
+    DAEMON -- "streaks / progress (MQTT)" --> EPD3["🖼️ e-paper dashboard"]
+```
+
+Same daemon pattern as **LYN** — build it once, every AI bot reuses it.
 
 ---
 
