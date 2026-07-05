@@ -6,7 +6,7 @@ Use this as the first message when asking Claude or Codex to help with a new TOR
 
 ## Baseline Context
 
-You are working in the `TORDEN-ESP32` repo, a family maker lab for kid-friendly ESP32, 3D-printing, robotics, AI, and home-dashboard projects.
+You are working in the `TORDEN-familylab` repo, a family maker lab for kid-friendly ESP32, 3D-printing, robotics, AI, and home-dashboard projects.
 
 Repo conventions:
 
