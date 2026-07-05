@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" font-family="Segoe UI, sans-serif">
+  <!-- LYN — the desk action button with a face -->
+  <rect width="200" height="200" rx="16" fill="#F4EDE3"/>
+  <rect x="0" y="162" width="200" height="38" fill="#C9B393"/>
+  <rect x="0" y="162" width="200" height="6" fill="#B39D7D"/>
+
+  <!-- device body -->
+  <rect x="52" y="44" width="96" height="118" rx="14" fill="#2E4A6B" stroke="#22374F" stroke-width="3"/>
+  <!-- screen with face -->
+  <rect x="64" y="58" width="72" height="52" rx="6" fill="#0E1828"/>
+  <circle cx="86" cy="78" r="6" fill="#E2B93B"/>
+  <circle cx="114" cy="78" r="6" fill="#E2B93B"/>
+  <path d="M84 94 q16 10 32 0" stroke="#E2B93B" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <!-- big action button -->
+  <circle cx="100" cy="136" r="15" fill="#E2B93B" stroke="#C9A227" stroke-width="3"/>
+  <path d="M100 128 L95 137 L100 137 L96 146 L106 135 L101 135 L105 128 Z" fill="#7A5A00"/>
+  <!-- side buttons -->
+  <rect x="45" y="80" width="7" height="22" rx="3" fill="#9AA3AB"/>
+  <rect x="148" y="80" width="7" height="22" rx="3" fill="#9AA3AB"/>
+
+  <!-- lightning bolts flying to the computer -->
+  <g fill="#E2B93B" stroke="#C9A227" stroke-width="1.5" stroke-linejoin="round">
+    <path d="M156 52 L146 68 L154 68 L144 84 L164 66 L156 66 L163 52 Z" transform="rotate(18 154 68) scale(.8) translate(44 -8)"/>
+    <path d="M36 60 L28 73 L34 73 L26 86 L42 71 L36 71 L42 60 Z" transform="scale(.75) translate(8 6)"/>
+  </g>
+
+  <!-- BLE waves -->
+  <g stroke="#7E93AE" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M160 118 q10 8 0 16"/>
+    <path d="M168 112 q16 12 0 28"/>
+  </g>
+
+  <text x="100" y="190" text-anchor="middle" font-size="12" fill="#8A7A63" letter-spacing="2">LYN</text>
+</svg>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" font-family="Segoe UI, sans-serif">
+  <!-- TORDEN-BOT — the walking quadruped -->
+  <rect width="200" height="200" rx="16" fill="#F4EDE3"/>
+  <rect x="0" y="162" width="200" height="38" fill="#C9B393"/>
+  <rect x="0" y="162" width="200" height="6" fill="#B39D7D"/>
+
+  <!-- rear legs (behind body) -->
+  <g stroke="#7E8790" stroke-width="6" fill="none" stroke-linecap="round">
+    <path d="M62 118 L50 140 L56 164"/>
+    <path d="M138 118 L150 140 L144 164"/>
+  </g>
+
+  <!-- body -->
+  <rect x="42" y="82" width="116" height="44" rx="10" fill="#8B5E3C" stroke="#6E4629" stroke-width="3"/>
+  <line x1="54" y1="94" x2="146" y2="94" stroke="#6E4629" stroke-width="1.5" opacity=".5"/>
+  <line x1="54" y1="114" x2="146" y2="114" stroke="#6E4629" stroke-width="1.5" opacity=".5"/>
+  <!-- servo hips -->
+  <circle cx="62" cy="122" r="8" fill="#9AA3AB" stroke="#6E767E" stroke-width="2"/>
+  <circle cx="138" cy="122" r="8" fill="#9AA3AB" stroke="#6E767E" stroke-width="2"/>
+
+  <!-- front legs -->
+  <g stroke="#9AA3AB" stroke-width="7" fill="none" stroke-linecap="round">
+    <path d="M74 124 L66 146 L74 166"/>
+    <path d="M126 124 L134 146 L126 166"/>
+  </g>
+  <circle cx="66" cy="146" r="5" fill="#7E8790"/>
+  <circle cx="134" cy="146" r="5" fill="#7E8790"/>
+
+  <!-- head -->
+  <rect x="118" y="46" width="52" height="42" rx="8" fill="#B08968" stroke="#8B6547" stroke-width="3"/>
+  <!-- camera eye -->
+  <circle cx="144" cy="66" r="13" fill="#1B222B" stroke="#0E1620" stroke-width="2"/>
+  <circle cx="144" cy="66" r="6" fill="#2E4A6B"/>
+  <circle cx="141" cy="63" r="2.4" fill="#F4EDE3"/>
+  <!-- antenna -->
+  <line x1="130" y1="46" x2="124" y2="30" stroke="#9AA3AB" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="124" cy="29" r="4" fill="#E2B93B"/>
+
+  <!-- wagging flag tail -->
+  <line x1="42" y1="88" x2="28" y2="70" stroke="#9AA3AB" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M28 70 L12 64 L26 58 Z" fill="#E2B93B" stroke="#C9A227" stroke-width="2"/>
+
+  <text x="100" y="190" text-anchor="middle" font-size="12" fill="#8A7A63" letter-spacing="2">TORDEN-BOT</text>
+</svg>

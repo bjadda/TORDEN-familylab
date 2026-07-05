@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" font-family="Segoe UI, sans-serif">
+  <!-- TAVLA — the e-paper family wall board -->
+  <rect width="200" height="200" rx="16" fill="#F4EDE3"/>
+  <!-- wall -->
+  <rect x="0" y="0" width="200" height="200" rx="16" fill="#E8DECF"/>
+  <!-- hanging nail + string -->
+  <circle cx="100" cy="22" r="4" fill="#7E8790"/>
+  <path d="M100 24 L64 46 M100 24 L136 46" stroke="#8A7A63" stroke-width="2.5" fill="none"/>
+
+  <!-- wooden frame -->
+  <rect x="34" y="46" width="132" height="106" rx="10" fill="#B08968" stroke="#8B6547" stroke-width="3"/>
+  <!-- e-paper panel -->
+  <rect x="46" y="58" width="108" height="82" rx="4" fill="#FBF9F4" stroke="#D9D2C4" stroke-width="2"/>
+
+  <!-- widgets: clock -->
+  <text x="70" y="86" font-size="20" font-weight="700" fill="#2B2B2B">12:07</text>
+  <!-- weather sun -->
+  <circle cx="128" cy="78" r="9" fill="none" stroke="#2B2B2B" stroke-width="2.5"/>
+  <g stroke="#2B2B2B" stroke-width="2.5" stroke-linecap="round">
+    <line x1="128" y1="63" x2="128" y2="58"/>
+    <line x1="128" y1="93" x2="128" y2="98"/>
+    <line x1="113" y1="78" x2="108" y2="78"/>
+    <line x1="143" y1="78" x2="148" y2="78"/>
+  </g>
+  <!-- divider -->
+  <line x1="52" y1="100" x2="148" y2="100" stroke="#D9D2C4" stroke-width="2"/>
+  <!-- checklist -->
+  <rect x="56" y="108" width="9" height="9" rx="2" fill="none" stroke="#2B2B2B" stroke-width="2"/>
+  <path d="M57 112 l3 4 l5 -7" stroke="#2B2B2B" stroke-width="2" fill="none"/>
+  <line x1="72" y1="113" x2="110" y2="113" stroke="#2B2B2B" stroke-width="2.5" stroke-linecap="round"/>
+  <rect x="56" y="124" width="9" height="9" rx="2" fill="none" stroke="#2B2B2B" stroke-width="2"/>
+  <line x1="72" y1="129" x2="98" y2="129" stroke="#2B2B2B" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- tiny chart -->
+  <polyline points="120,132 128,122 136,127 146,112" stroke="#2B2B2B" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- a small scrap-bot admires the board -->
+  <g transform="translate(146,150)">
+    <rect x="0" y="0" width="26" height="30" rx="5" fill="#6E4B33" stroke="#54371F" stroke-width="2"/>
+    <circle cx="9"  cy="11" r="5" fill="#D7DBDE" stroke="#8F979E" stroke-width="1.6"/>
+    <circle cx="19" cy="11" r="4" fill="#D7DBDE" stroke="#8F979E" stroke-width="1.6"/>
+    <path d="M8 22 q6 4 12 0" stroke="#2B1B10" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <text x="100" y="188" text-anchor="middle" font-size="12" fill="#8A7A63" letter-spacing="2">TAVLA</text>
+</svg>
